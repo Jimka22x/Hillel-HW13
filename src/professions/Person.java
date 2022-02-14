@@ -1,16 +1,25 @@
 package professions;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
 public class Person {
     protected String name;
     protected String secondName;
     protected String lastName;
     protected int experienceYears;
+    protected String dateOfBirth;
 
     public Person(String name, String secondName, String lastName, int experienceYears) {
         this.name = name;
         this.secondName = secondName;
         this.lastName = lastName;
         this.experienceYears = experienceYears;
+    }
+
+    public Person(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public void setName(String name) {
@@ -29,6 +38,10 @@ public class Person {
         this.experienceYears = experienceYears;
     }
 
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
     public String getName() {
         return name;
     }
@@ -45,6 +58,17 @@ public class Person {
         return experienceYears;
     }
 
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public int calculateAge() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        LocalDate birthdayDate = LocalDate.parse(getDateOfBirth(), formatter);
+        Period period = Period.between(birthdayDate, java.time.LocalDate.now());
+        return period.getYears();
+    }
+
     @Override
     public String toString() {
         return "Person{" +
@@ -52,6 +76,7 @@ public class Person {
                 ", secondName='" + secondName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", experienceYears=" + experienceYears +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
                 '}';
     }
 }
