@@ -1,4 +1,4 @@
-package details;
+package com.unique.pack.details;
 
 public class Engine {
     protected int enginePower;

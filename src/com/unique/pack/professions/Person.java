@@ -1,4 +1,4 @@
-package professions;
+package com.unique.pack.professions;
 
 import java.time.LocalDate;
 import java.time.Period;

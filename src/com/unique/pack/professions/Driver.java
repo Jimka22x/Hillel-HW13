@@ -1,4 +1,4 @@
-package professions;
+package com.unique.pack.professions;
 
 public class Driver extends Person {
 

@@ -1,7 +1,7 @@
-package vehicle;
+package com.unique.pack.vehicle;
 
-import details.Engine;
-import professions.Driver;
+import com.unique.pack.details.Engine;
+import com.unique.pack.professions.Driver;
 
 public class Lorry extends Car {
     protected int loadCapacity;

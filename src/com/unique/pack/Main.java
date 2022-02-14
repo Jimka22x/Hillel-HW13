@@ -1,11 +1,11 @@
 package com.unique.pack;
 
-import details.Engine;
-import professions.Driver;
-import professions.Person;
-import vehicle.Car;
-import vehicle.Lorry;
-import vehicle.SportCar;
+import com.unique.pack.details.Engine;
+import com.unique.pack.professions.Driver;
+import com.unique.pack.professions.Person;
+import com.unique.pack.vehicle.Car;
+import com.unique.pack.vehicle.Lorry;
+import com.unique.pack.vehicle.SportCar;
 
 public class Main {
 
@@ -15,7 +15,7 @@ public class Main {
     }
 
     private static void task1() {
-//     1) Автомобили. Создать класс Car в пакете vehicles, Engine в пакете details и Driver в пакете professions.
+//     1) Автомобили. Создать класс Car в пакете vehicles, Engine в пакете com.unique.pack.details и Driver в пакете com.unique.pack.professions.
 //        Класс Car содержит поля - марка автомобиля, класс автомобиля, вес, водитель типа Driver, мотор типа Engine.
 //        Методы start (), stop(), turnRight(), turnLeft(), которые выводят на печать:
 //        "Поехали", "Останавливаемся", "Поворот направо" или "Поворот налево".
